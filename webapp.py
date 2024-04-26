@@ -1,9 +1,10 @@
-import numpy as np 
+import numpy as np
 import pickle
 import streamlit as st 
 
 # Load the model
-loaded_model = pickle.load(open('C:/Users/512GB/OneDrive/Documents/Final Year Project/Project implementation/Stock prediction videos/dataquest/New folder/performance_model.sav', 'rb'))
+model_path = 'performance_model.sav'  # Update the path to your model file
+loaded_model = pickle.load(open(model_path, 'rb'))
 
 # Creating a function for Prediction
 def stock_prediction(input_data):
@@ -29,11 +30,11 @@ def main():
     # Code for Prediction
     if st.button('Predict stock price'):
         prediction = stock_prediction([Simplemovingaverage_3,
-                                              Simplemovingaverage_4,
-                                              Exponentialmovingaverage,
-                                              Relativestrengthindex,
-                                              Momentum,
-                                              Previousdaycloseprice])
+                                       Simplemovingaverage_4,
+                                       Exponentialmovingaverage,
+                                       Relativestrengthindex,
+                                       Momentum,
+                                       Previousdaycloseprice])
         st.success(f'Predicted Stock Price is : {prediction[0]}')
 
 if __name__ == '__main__':
