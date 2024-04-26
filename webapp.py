@@ -18,6 +18,11 @@ def stock_prediction(input_data):
 def main():
     # Giving a title
     st.title('Stock Price Prediction Web App')
+    html_temp = """
+    <div style="background-color:tomato;padding:10px">
+    <h2 style="color:white;text-align:center;">Predicting the Precipitable water available for Precipitation </h2>
+    </div>
+    """
     
     # Getting the input data from the user
     Simplemovingaverage_3 = st.text_input('Simple Moving Average 3', '0.0')
