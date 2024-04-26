@@ -20,7 +20,7 @@ def main():
     st.title('Stock Price Prediction Web App')
     html_temp = """
     <div style="background-color:tomato;padding:10px">
-    <h2 style="color:white;text-align:center;">Predicting the Precipitable water available for Precipitation </h2>
+    <h2 style="color:white;text-align:center;">Stock Price Prediction Web App </h2>
     </div>
     """
     
